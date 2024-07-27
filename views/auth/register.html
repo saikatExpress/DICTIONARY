@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="shortcut icon" href="../../assets/logos/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../assets/css/register.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        
+        <form action="../../auth/signup.php" method="POST">
+            <input type="text" name="username" placeholder="Username">
+            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="mobile" placeholder="Mobile">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="login-link">
+            <p>Do you have an account? <a href="../../index.php">Login here</a></p>
+        </div>
+    </div>
+
+
+
+    <!-- <script>
+        $(document).ready(function() {
+            $('form').on('submit', function(e) {
+                var isValid = true;
+                var errorMessage = '';
+
+                // Check if fields are not empty
+                if ($('input[name="username"]').val().trim() === '') {
+                    isValid = false;
+                    errorMessage += 'Username is required.\n';
+                }
+                if ($('input[name="email"]').val().trim() === '') {
+                    isValid = false;
+                    errorMessage += 'Email is required.\n';
+                }
+                if ($('input[name="mobile"]').val().trim() === '') {
+                    isValid = false;
+                    errorMessage += 'Mobile number is required.\n';
+                }
+                if ($('input[name="password"]').val().trim() === '') {
+                    isValid = false;
+                    errorMessage += 'Password is required.\n';
+                }
+
+                // Check if email is valid
+                var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/;
+                if (!emailPattern.test($('input[name="email"]').val().trim())) {
+                    isValid = false;
+                    errorMessage += 'Invalid email format.\n';
+                }
+
+                // Check if mobile number is valid
+                var mobilePattern = /^\d{11}$/;
+                if (!mobilePattern.test($('input[name="mobile"]').val().trim())) {
+                    isValid = false;
+                    errorMessage += 'Mobile number must be 10 digits.\n';
+                }
+
+                // Show error message if form is invalid
+                if (!isValid) {
+                    alert(errorMessage);
+                    e.preventDefault();
+                }
+            });
+        });
+    </script> -->
+</body>
+</html>
