@@ -5,11 +5,21 @@
 <?php include_once '../views/layout/header.php'; ?>
     <div class="main-content">
         <h2>Welcome to Your Dashboard</h2>
+        <?php
         
+        if (isset($_SESSION['message'])) {
+            echo '<div class="alert">' . $_SESSION['message'] . '</div>';
+            // Unset the message after displaying it
+            unset($_SESSION['message']);
+        }
+        
+        ?>
         <!-- Post Form -->
         <div class="post-form">
-            <textarea rows="4" placeholder="What's on your mind?"></textarea>
-            <button type="button">Post</button>
+            <form method="post" action="../auth/submit_post.php">
+                <textarea name="content" id="editor"></textarea>
+                <button style="margin-top: 10px;" type="submit">Post</button>
+            </form>
         </div>
         
         <!-- Example Posts -->
@@ -23,5 +33,9 @@
             <div class="content">Here is another example post. Feel free to customize the content and style as needed.</div>
         </div>
     </div>
+
+    <script>
+    CKEDITOR.replace('editor');
+</script>
 <?php include_once '../views/layout/footer.php'; ?>
 

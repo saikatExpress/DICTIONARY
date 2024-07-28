@@ -1,213 +1,115 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
 }
+
 .container {
     max-width: 90%;
-    width: 400px;
     margin: 2rem auto;
     padding: 1rem;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
-h2 {
+
+h3 {
     margin-bottom: 1rem;
     color: #333;
 }
+
 .form-container {
-    display: none; /* Initially hidden */
-    margin-top: 1rem;
+    display: none;
 }
-.form-container.show {
-    display: block; /* Show when toggled */
+
+.input-group-append .btn {
+    border-radius: 0 4px 4px 0;
 }
-input[type="email"],
-input[type="password"],
-button {
-    display: block;
-    width: calc(100% - 1.6rem);
-    padding: 0.8rem;
+
+.list-group-item:hover {
+    background-color: #f0f0f0;
+}
+
+.additional-sections h4 {
+    margin-top: 2rem;
     margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #0056b3;
-}
-.error {
-    color: red;
-    font-size: 0.9rem;
-}
-.links p {
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
-}
-.links a {
-    color: #007bff;
-    text-decoration: none;
-}
-.links a:hover {
-    text-decoration: underline;
-}
-.dictionary-section {
-    max-width: 90%;
-    width: 600px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-.dictionary-section h3 {
-    margin-top: 0;
     color: #333;
 }
-.search-bar {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-.search-bar input {
-    flex: 1;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
-}
-.search-bar button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 0.8rem;
-    border-radius: 4px;
-}
-.search-bar button:hover {
-    background-color: #0056b3;
+
+.post, .question, .answered-question {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
-.suggestions-container {
-    position: absolute;
-    top: 39%; /* Position just below the input field */
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure it appears above other content */
-}
-
-#suggestions-list {
-    background-color: #fff; /* Background color for the suggestions list */
-    border: 1px solid #ddd; /* Border around the list */
-    border-radius: 4px; /* Rounded corners */
-    max-height: 200px; /* Max height for the list */
-    overflow-y: auto; /* Scroll if the list exceeds max height */
+.post h5, .question h5, .answered-question h5 {
     margin: 0;
-    padding: 0;
-    list-style: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
-}
-
-.suggestion-item {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.suggestion-item:hover {
-    background-color: #f0f0f0; /* Highlight on hover */
-}
-
-.category {
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #007bff;
 }
 
 .category-title {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.meanings-list {
-    list-style: none;
-    padding: 0;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .meaning-item {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.meaning-item.noun {
+    color: #007bff;
+}
+
+.meaning-item.verb {
+    color: #28a745;
+}
+
+.meaning-item.adjective {
+    color: #ffc107;
+}
+
+.meaning-item.adverb {
+    color: #17a2b8;
+}
+
+.ticker {
+    background-color: darkblue;
+    color: oldlace;
+    overflow: hidden;
     position: relative;
+    padding: 10px 0;
+    font-size: 1rem;
+    border-top: 2px solid #007bff;
+    font-weight: 600;
 }
 
-.meaning-item::before {
-    content: '';
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
-    background: #007bff; /* Icon color */
-    border-radius: 50%;
+.ticker-wrap {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    white-space: nowrap; /* Prevent wrapping */
+    animation: ticker 20s linear infinite; /* Adjust duration based on content */
 }
 
-.meaning-item.noun::before {
-    background: #007bff; /* Blue for nouns */
+.ticker-item {
+    padding: 0 2rem; /* Spacing between items */
+    flex-shrink: 0; /* Prevent items from shrinking */
 }
 
-.meaning-item.pronoun::before {
-    background: #28a745; /* Green for pronouns */
-}
-
-.meaning-item.adjective::before {
-    background: #ffc107; /* Yellow for adjectives */
-}
-
-.meaning-item.verb::before {
-    background: #dc3545; /* Red for verbs */
-}
-
-.meaning-item.adverb::before {
-    background: #17a2b8; /* Teal for adverbs */
-}
-
-.article {
-    margin-top: 1rem;
-    text-align: left;
-}
-.article h4 {
-    margin-top: 0;
-    color: #333;
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 @media (max-width: 600px) {
-    .container,
-    .dictionary-section {
-        padding: 0.5rem;
-        margin: 1rem;
-    }
-    input[type="email"],
-    input[type="password"],
-    button {
-        width: 100%;
-    }
-    .search-bar {
-        flex-direction: column;
-    }
-    .search-bar button {
-        margin-top: 0.5rem;
-        width: 100%;
+    .ticker-item {
+        padding: 0 1rem; /* Adjust padding for smaller screens */
     }
 }
