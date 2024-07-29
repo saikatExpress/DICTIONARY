@@ -51,6 +51,25 @@ h3 {
     color: #007bff;
 }
 
+.post .info {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+.post .info i {
+    margin-right: 5px;
+}
+.post .info .category {
+    color: #007bff;
+}
+.post .info .date-time {
+    color: #28a745;
+}
+.post .info .privacy {
+    color: #dc3545;
+}
+
 .category-title {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;

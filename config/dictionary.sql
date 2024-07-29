@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 28, 2024 at 06:36 PM
+-- Generation Time: Jul 29, 2024 at 06:41 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -46,6 +46,178 @@ CREATE TABLE `posts` (
 INSERT INTO `posts` (`id`, `created_by`, `title`, `content`, `posted_time`, `status`, `flag`, `updated_at`, `created_at`) VALUES
 (1, 1, '<p><strong>I am the super.</strong></p>', '<p><strong>I am the super.</strong></p>\r\n', NULL, 'active', 0, '2024-07-27 13:49:36', '2024-07-27 13:49:36'),
 (2, 1, '<p><span class=\"marker\"><strong>I am the owner</strong></span> of my city</p>', 'I am the owner of my city\r\n', NULL, 'active', 0, '2024-07-27 13:52:48', '2024-07-27 13:52:48');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sentences`
+--
+
+CREATE TABLE `sentences` (
+  `id` int UNSIGNED NOT NULL,
+  `sentence_name` varchar(500) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `sentence_meaning` varchar(1000) NOT NULL,
+  `privacy` varchar(50) NOT NULL DEFAULT 'public',
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `sentences`
+--
+
+INSERT INTO `sentences` (`id`, `sentence_name`, `category`, `sentence_meaning`, `privacy`, `created_at`) VALUES
+(1, 'Have you finished reading the book', 'english', 'তুমি কি বইখানা পড়ে শেষ করেছ', 'public', '2024-07-30 00:25:46'),
+(2, ' He did nothing but sleep', 'english', 'সে কেবল ঘুমাত আর কেছুই করত না', 'public', '2024-07-30 00:25:46'),
+(3, 'He did nothing but sleep', 'english', 'সে কেবল ঘুমাত আর কেছুই করত না', 'public', '2024-07-30 00:25:46'),
+(4, 'She loves to read books', 'english', 'সে বই পড়তে ভালবাসে', 'public', '2024-07-30 00:25:46'),
+(5, 'The sun rises in the east', 'english', 'সূর্য পূর্বদিকে উদিত হয়', 'public', '2024-07-30 00:25:46'),
+(6, 'He is a good student', 'english', 'সে একজন ভালো ছাত্র', 'public', '2024-07-30 00:25:46'),
+(7, 'They are playing football', 'english', 'তারা ফুটবল খেলছে', 'public', '2024-07-30 00:25:46'),
+(8, 'She cooked a delicious meal', 'english', 'সে একটি সুস্বাদু খাবার রান্না করেছিল', 'public', '2024-07-30 00:25:46'),
+(9, 'They are going on vacation', 'english', 'তারা ছুটিতে যাচ্ছে', 'public', '2024-07-30 00:25:46'),
+(10, 'He reads the newspaper daily', 'english', 'সে প্রতিদিন সংবাদপত্র পড়ে', 'public', '2024-07-30 00:25:46'),
+(11, 'The cat is sleeping on the couch', 'english', 'বিড়ালটি সোফায় ঘুমাচ্ছে', 'public', '2024-07-30 00:25:46'),
+(12, 'She is wearing a beautiful dress', 'english', 'সে একটি সুন্দর পোশাক পরেছে', 'public', '2024-07-30 00:25:46'),
+(13, 'The children are playing in the park', 'english', 'শিশুরা পার্কে খেলছে', 'public', '2024-07-30 00:25:46'),
+(14, 'He is working on his project', 'english', 'সে তার প্রকল্পে কাজ করছে', 'public', '2024-07-30 00:25:46'),
+(15, 'They celebrated their anniversary', 'english', 'তারা তাদের বিবাহবার্ষিকী উদযাপন করেছিল', 'public', '2024-07-30 00:25:46'),
+(16, 'She received a gift from her friend', 'english', 'সে তার বন্ধুর কাছ থেকে একটি উপহার পেয়েছিল', 'public', '2024-07-30 00:25:46'),
+(17, 'He is studying for his exams', 'english', 'সে তার পরীক্ষার জন্য পড়াশোনা করছে', 'public', '2024-07-30 00:25:46'),
+(18, 'They enjoyed the movie', 'english', 'তারা সিনেমাটি উপভোগ করেছিল', 'public', '2024-07-30 00:25:46'),
+(19, 'She painted a beautiful picture', 'english', 'সে একটি সুন্দর ছবি এঁকেছিল', 'public', '2024-07-30 00:25:46'),
+(20, 'The dog is barking loudly', 'english', 'কুকুরটি জোরে চিৎকার করছে', 'public', '2024-07-30 00:25:46'),
+(21, 'He is jogging in the morning', 'english', 'সে সকালে দৌড়াচ্ছে', 'public', '2024-07-30 00:25:46'),
+(22, 'They are building a new house', 'english', 'তারা একটি নতুন বাড়ি তৈরি করছে', 'public', '2024-07-30 00:25:46'),
+(23, 'She is learning to play the piano', 'english', 'সে পিয়ানো বাজানো শিখছে', 'public', '2024-07-30 00:25:46'),
+(24, 'He fixed the broken chair', 'english', 'সে ভাঙা চেয়ারটি মেরামত করেছে', 'public', '2024-07-30 00:25:46'),
+(25, 'They are planting trees in the garden', 'english', 'তারা বাগানে গাছ লাগাচ্ছে', 'public', '2024-07-30 00:25:46'),
+(26, 'She is baking a cake', 'english', 'সে একটি কেক বেক করছে', 'public', '2024-07-30 00:25:46'),
+(27, 'He is playing the guitar', 'english', 'সে গিটার বাজাচ্ছে', 'public', '2024-07-30 00:25:46'),
+(28, 'She wrote a letter to her friend', 'english', 'সে তার বন্ধুকে একটি চিঠি লিখেছে', 'public', '2024-07-30 00:25:46'),
+(29, 'He visited the museum last weekend', 'english', 'সে গত সপ্তাহান্তে মিউজিয়ামটি পরিদর্শন করেছিল', 'public', '2024-07-30 00:25:46'),
+(30, 'They are going to the concert tonight', 'english', 'তারা今晚 কনসার্টে যাচ্ছে', 'public', '2024-07-30 00:25:46'),
+(31, 'She took a photograph of the sunset', 'english', 'সে সূর্যাস্তের একটি ছবি তুলেছিল', 'public', '2024-07-30 00:25:46'),
+(32, 'He is repairing his bicycle', 'english', 'সে তার সাইকেল মেরামত করছে', 'public', '2024-07-30 00:25:46'),
+(33, 'They are having a picnic in the park', 'english', 'তারা পার্কে একটি পিকনিক করছে', 'public', '2024-07-30 00:25:46'),
+(34, 'She learned to cook Italian food', 'english', 'সে ইতালীয় খাবার রান্না করতে শিখেছে', 'public', '2024-07-30 00:25:46'),
+(35, 'He is watching a documentary', 'english', 'সে একটি ডকুমেন্টারি দেখছে', 'public', '2024-07-30 00:25:46'),
+(36, 'They are decorating the house for the party', 'english', 'তারা পার্টির জন্য বাড়িটি সাজাচ্ছে', 'public', '2024-07-30 00:25:46'),
+(37, 'She made a scrapbook of her travels', 'english', 'সে তার ভ্রমণের একটি স্ক্র্যাপবুক তৈরি করেছে', 'public', '2024-07-30 00:25:46'),
+(38, 'He is organizing a charity event', 'english', 'সে একটি দাতব্য ইভেন্ট আয়োজন করছে', 'public', '2024-07-30 00:25:46'),
+(39, 'They are renovating their kitchen', 'english', 'তারা তাদের রান্নাঘর পুনর্নবীকরণ করছে', 'public', '2024-07-30 00:25:46'),
+(40, 'She is learning to speak French', 'english', 'সে ফরাসি ভাষা শিখছে', 'public', '2024-07-30 00:25:46'),
+(41, 'He is gardening in his backyard', 'english', 'সে তার পেছনের আঙিনায় মাটি চাপছে', 'public', '2024-07-30 00:25:46'),
+(42, 'They are trying a new restaurant', 'english', 'তারা একটি নতুন রেস্টুরেন্ট ট্রাই করছে', 'public', '2024-07-30 00:25:46'),
+(43, 'She finished reading her book', 'english', 'সে তার বই পড়া শেষ করেছে', 'public', '2024-07-30 00:25:46'),
+(44, 'He is jogging along the river', 'english', 'সে নদীর পাশে দৌড়াচ্ছে', 'public', '2024-07-30 00:25:46'),
+(45, 'They are celebrating their graduation', 'english', 'তারা তাদের স্নাতক অনুষ্ঠান উদযাপন করছে', 'public', '2024-07-30 00:25:46'),
+(46, 'She is practicing yoga every morning', 'english', 'সে প্রতিদিন সকালে যোগাভ্যাস করছে', 'public', '2024-07-30 00:25:46'),
+(47, 'He is writing a novel', 'english', 'সে একটি উপন্যাস লিখছে', 'public', '2024-07-30 00:25:46'),
+(48, 'The sky is clear today', 'english', 'আজ আকাশ পরিষ্কার', 'public', '2024-07-30 00:35:04'),
+(49, 'She enjoys hiking on weekends', 'english', 'সে সপ্তাহান্তে হাইকিং করতে পছন্দ করে', 'public', '2024-07-30 00:35:04'),
+(50, 'He visited Paris last summer', 'english', 'সে গত গ্রীষ্মে প্যারিস পরিদর্শন করেছিল', 'public', '2024-07-30 00:35:04'),
+(51, 'They are watching a new series', 'english', 'তারা একটি নতুন সিরিজ দেখছে', 'public', '2024-07-30 00:35:04'),
+(52, 'She made a delicious pie', 'english', 'সে একটি সুস্বাদু পাই তৈরি করেছে', 'public', '2024-07-30 00:35:04'),
+(53, 'He is learning to play the drums', 'english', 'সে ড্রাম বাজানো শিখছে', 'public', '2024-07-30 00:35:04'),
+(54, 'They went to the beach for vacation', 'english', 'তারা ছুটির জন্য সমুদ্র সৈকতে গিয়েছিল', 'public', '2024-07-30 00:35:04'),
+(55, 'She bought a new laptop', 'english', 'সে একটি নতুন ল্যাপটপ কিনেছে', 'public', '2024-07-30 00:35:04'),
+(56, 'He is reading a mystery novel', 'english', 'সে একটি রহস্য উপন্যাস পড়ছে', 'public', '2024-07-30 00:35:04'),
+(57, 'They had a barbecue party', 'english', 'তারা একটি বারবিকিউ পার্টি আয়োজন করেছিল', 'public', '2024-07-30 00:35:04'),
+(58, 'She is practicing her painting skills', 'english', 'সে তার পেইন্টিং দক্ষতা চর্চা করছে', 'public', '2024-07-30 00:35:04'),
+(59, 'He solved the puzzle quickly', 'english', 'সে দ্রুত ধাঁধা সমাধান করেছে', 'public', '2024-07-30 00:35:04'),
+(60, 'They are decorating their living room', 'english', 'তারা তাদের বসার ঘর সাজাচ্ছে', 'public', '2024-07-30 00:35:04'),
+(61, 'She enjoys baking bread from scratch', 'english', 'সে প্রাথমিক উপাদান থেকে রুটি বেক করতে পছন্দ করে', 'public', '2024-07-30 00:35:04'),
+(62, 'He joined a new fitness class', 'english', 'সে একটি নতুন ফিটনেস ক্লাসে যোগ দিয়েছে', 'public', '2024-07-30 00:35:04'),
+(63, 'They went hiking in the mountains', 'english', 'তারা পাহাড়ে হাইকিং করতে গিয়েছিল', 'public', '2024-07-30 00:35:04'),
+(64, 'She attended a cooking workshop', 'english', 'সে একটি রান্নার কর্মশালায় অংশগ্রহণ করেছিল', 'public', '2024-07-30 00:35:04'),
+(65, 'He visited a historic castle', 'english', 'সে একটি ঐতিহাসিক দুর্গ পরিদর্শন করেছিল', 'public', '2024-07-30 00:35:04'),
+(66, 'They are planning a road trip', 'english', 'তারা একটি রোড ট্রিপ পরিকল্পনা করছে', 'public', '2024-07-30 00:35:04'),
+(67, 'She is learning to play chess', 'english', 'সে দাবা খেলতে শিখছে', 'public', '2024-07-30 00:35:04'),
+(68, 'He is building a treehouse', 'english', 'সে একটি গাছের বাড়ি তৈরি করছে', 'public', '2024-07-30 00:35:04'),
+(69, 'She is watching a documentary', 'english', 'সে একটি তথ্যচিত্র দেখছে', 'public', '2024-07-30 00:36:00'),
+(70, 'He enjoys playing the guitar', 'english', 'সে গিটার বাজাতে পছন্দ করে', 'public', '2024-07-30 00:36:00'),
+(71, 'They are visiting their grandparents', 'english', 'তারা তাদের দাদু-দাদি পরিদর্শন করছে', 'public', '2024-07-30 00:36:00'),
+(72, 'She went to the gym this morning', 'english', 'সে আজ সকালে জিমে গিয়েছিল', 'public', '2024-07-30 00:36:00'),
+(73, 'He finished reading the book', 'english', 'সে বইটি পড়া শেষ করেছে', 'public', '2024-07-30 00:36:00'),
+(74, 'They had dinner at a fancy restaurant', 'english', 'তারা একটি ফ্যান্সি রেস্টুরেন্টে রাতের খাবার খেয়েছে', 'public', '2024-07-30 00:36:00'),
+(75, 'She bought new shoes yesterday', 'english', 'সে গতকাল নতুন জুতো কিনেছে', 'public', '2024-07-30 00:36:00'),
+(76, 'He is cooking dinner for his family', 'english', 'সে তার পরিবারের জন্য রাতের খাবার রান্না করছে', 'public', '2024-07-30 00:36:00'),
+(77, 'They are going to a concert tonight', 'english', 'তারা আজ রাতে একটি কনসার্টে যাচ্ছে', 'public', '2024-07-30 00:36:00'),
+(78, 'She practices yoga every morning', 'english', 'সে প্রতিদিন সকালে যোগব্যায়াম করে', 'public', '2024-07-30 00:36:00'),
+(79, 'He is fixing his car', 'english', 'সে তার গাড়ি মেরামত করছে', 'public', '2024-07-30 00:36:00'),
+(80, 'They are reading a novel together', 'english', 'তারা একসঙ্গে একটি উপন্যাস পড়ছে', 'public', '2024-07-30 00:36:00'),
+(81, 'She planted flowers in her garden', 'english', 'সে তার বাগানে ফুল লাগিয়েছে', 'public', '2024-07-30 00:36:00'),
+(82, 'He visited a museum last week', 'english', 'সে গত সপ্তাহে একটি জাদুঘর পরিদর্শন করেছিল', 'public', '2024-07-30 00:36:00'),
+(83, 'They are watching a movie marathon', 'english', 'তারা একটি মুভি ম্যারাথন দেখছে', 'public', '2024-07-30 00:36:00'),
+(84, 'She attended a music festival', 'english', 'সে একটি সঙ্গীত উৎসবে অংশগ্রহণ করেছিল', 'public', '2024-07-30 00:36:00'),
+(85, 'He is learning a new language', 'english', 'সে একটি নতুন ভাষা শিখছে', 'public', '2024-07-30 00:36:00'),
+(86, 'They went camping over the weekend', 'english', 'তারা সপ্তাহান্তে ক্যাম্পিং করতে গিয়েছিল', 'public', '2024-07-30 00:36:00'),
+(87, 'She made a beautiful cake for the party', 'english', 'সে পার্টির জন্য একটি সুন্দর কেক তৈরি করেছে', 'public', '2024-07-30 00:36:00'),
+(88, 'He is writing a new book', 'english', 'সে একটি নতুন বই লিখছে', 'public', '2024-07-30 00:36:00'),
+(89, 'They had a picnic in the park', 'english', 'তারা পার্কে একটি পিকনিক করেছিল', 'public', '2024-07-30 00:36:00'),
+(90, 'She went shopping for new clothes', 'english', 'সে নতুন পোশাক কিনতে শপিংয়ে গিয়েছিল', 'public', '2024-07-30 00:36:48'),
+(91, 'He is attending a conference next week', 'english', 'সে আগামী সপ্তাহে একটি সম্মেলনে অংশগ্রহণ করবে', 'public', '2024-07-30 00:36:48'),
+(92, 'They are exploring a new city', 'english', 'তারা একটি নতুন শহর অন্বেষণ করছে', 'public', '2024-07-30 00:36:48'),
+(93, 'She is learning to cook Italian dishes', 'english', 'সে ইতালীয় খাবার রান্না শেখার চেষ্টা করছে', 'public', '2024-07-30 00:36:48'),
+(94, 'He completed a marathon last month', 'english', 'সে গত মাসে একটি ম্যারাথন সম্পন্ন করেছে', 'public', '2024-07-30 00:36:48'),
+(95, 'They enjoyed a boat ride on the lake', 'english', 'তারা হ্রদে একটি নৌকা ভ্রমণের আনন্দ নিয়েছে', 'public', '2024-07-30 00:36:48'),
+(96, 'She organized a surprise party for him', 'english', 'সে তার জন্য একটি সারপ্রাইজ পার্টি আয়োজন করেছে', 'public', '2024-07-30 00:36:48'),
+(97, 'He is building a model airplane', 'english', 'সে একটি মডেল বিমানের মডেল তৈরি করছে', 'public', '2024-07-30 00:36:48'),
+(98, 'They visited an art gallery on Sunday', 'english', 'তারা রবিবার একটি আর্ট গ্যালারি পরিদর্শন করেছিল', 'public', '2024-07-30 00:36:48'),
+(99, 'She joined a local book club', 'english', 'সে একটি স্থানীয় বই ক্লাবে যোগ দিয়েছে', 'public', '2024-07-30 00:36:48'),
+(100, 'He made reservations for dinner', 'english', 'সে রাতের খাবারের জন্য রিজার্ভেশন করেছে', 'public', '2024-07-30 00:36:48'),
+(101, 'They went skiing in the Alps', 'english', 'তারা আলপস পর্বতমালায় স্কিইং করতে গিয়েছিল', 'public', '2024-07-30 00:36:48'),
+(102, 'She is working on a new project', 'english', 'সে একটি নতুন প্রকল্পে কাজ করছে', 'public', '2024-07-30 00:36:48'),
+(103, 'He painted his room last weekend', 'english', 'সে গত সপ্তাহান্তে তার ঘর রাঙিয়েছে', 'public', '2024-07-30 00:36:48'),
+(104, 'They attended a wedding ceremony', 'english', 'তারা একটি বিয়ের অনুষ্ঠানে অংশগ্রহণ করেছিল', 'public', '2024-07-30 00:36:48'),
+(105, 'She baked cookies for the bake sale', 'english', 'সে বেক সেল জন্য কুকি বেক করেছে', 'public', '2024-07-30 00:36:48'),
+(106, 'He started a new hobby last year', 'english', 'সে গত বছর একটি নতুন শখ শুরু করেছে', 'public', '2024-07-30 00:36:48'),
+(107, 'They went on a road trip across the country', 'english', 'তারা দেশজুড়ে একটি রোড ট্রিপে গিয়েছিল', 'public', '2024-07-30 00:36:48'),
+(108, 'She gave a presentation at work', 'english', 'সে তার কাজে একটি উপস্থাপনা দিয়েছে', 'public', '2024-07-30 00:36:48'),
+(109, 'He enjoyed a relaxing weekend at the spa', 'english', 'সে স্পায় একটি স্বস্তিদায়ক সপ্তাহান্তের আনন্দ নিয়েছে', 'public', '2024-07-30 00:36:48'),
+(110, 'They are learning to dance salsa', 'english', 'তারা স্যালসা নাচ শিখছে', 'public', '2024-07-30 00:36:48'),
+(111, 'She learned to knit from her grandmother', 'english', 'সে তার দাদির কাছ থেকে সোয়েটার বুনতে শিখেছে', 'public', '2024-07-30 00:38:20'),
+(112, 'He volunteered at the animal shelter', 'english', 'সে পশু আশ্রয়ে স্বেচ্ছাসেবক হিসেবে কাজ করেছে', 'public', '2024-07-30 00:38:20'),
+(113, 'They explored a historic battlefield', 'english', 'তারা একটি ঐতিহাসিক যুদ্ধক্ষেত্র অনুসন্ধান করেছিল', 'public', '2024-07-30 00:38:20'),
+(114, 'She enjoyed a sunset walk on the beach', 'english', 'সে সৈকতে সূর্যাস্তের সময় হাঁটতে উপভোগ করেছে', 'public', '2024-07-30 00:38:20'),
+(115, 'He is learning to play the piano', 'english', 'সে পিয়ানো বাজানো শিখছে', 'public', '2024-07-30 00:38:20'),
+(116, 'They attended a cooking class together', 'english', 'তারা একসঙ্গে একটি রান্নার ক্লাসে অংশগ্রহণ করেছিল', 'public', '2024-07-30 00:38:20'),
+(117, 'She participated in a charity run', 'english', 'সে একটি দাতব্য দৌড়ে অংশগ্রহণ করেছে', 'public', '2024-07-30 00:38:20'),
+(118, 'He went fishing with his friends', 'english', 'সে তার বন্ধুদের সঙ্গে মাছ ধরতে গিয়েছিল', 'public', '2024-07-30 00:38:20'),
+(119, 'They visited a botanical garden', 'english', 'তারা একটি উদ্ভিদ উদ্যান পরিদর্শন করেছিল', 'public', '2024-07-30 00:38:20'),
+(120, 'She is reading a book about history', 'english', 'সে ইতিহাস সম্পর্কে একটি বই পড়ছে', 'public', '2024-07-30 00:38:20'),
+(121, 'He designed a new logo for the company', 'english', 'সে কোম্পানির জন্য একটি নতুন লোগো ডিজাইন করেছে', 'public', '2024-07-30 00:38:20'),
+(122, 'They went on a hot air balloon ride', 'english', 'তারা একটি গরম বায়ু বেলুনের ভ্রমণে গিয়েছিল', 'public', '2024-07-30 00:38:20'),
+(123, 'She made handmade candles for gifts', 'english', 'সে উপহারের জন্য হাতে তৈরি মোমবাতি বানিয়েছে', 'public', '2024-07-30 00:38:20'),
+(124, 'He repaired a broken bicycle', 'english', 'সে একটি ভাঙা বাইসাইকেল মেরামত করেছে', 'public', '2024-07-30 00:38:20'),
+(125, 'They are planting a vegetable garden', 'english', 'তারা একটি সবজি বাগান লাগাচ্ছে', 'public', '2024-07-30 00:38:20'),
+(126, 'She visited a famous landmark', 'english', 'সে একটি বিখ্যাত স্থান পরিদর্শন করেছে', 'public', '2024-07-30 00:38:20'),
+(127, 'He started learning graphic design', 'english', 'সে গ্রাফিক ডিজাইন শিখতে শুরু করেছে', 'public', '2024-07-30 00:38:20'),
+(128, 'They had a barbecue in their backyard', 'english', 'তারা তাদের পিছনের উঠোনে একটি বারবিকিউ করেছে', 'public', '2024-07-30 00:38:20'),
+(129, 'She attended a film festival last month', 'english', 'সে গত মাসে একটি চলচ্চিত্র উৎসবে অংশগ্রহণ করেছিল', 'public', '2024-07-30 00:38:20'),
+(130, 'He is writing a novel about adventure', 'english', 'সে একটি অ্যাডভেঞ্চার সম্পর্কিত উপন্যাস লিখছে', 'public', '2024-07-30 00:38:20'),
+(131, 'They are practicing meditation techniques', 'english', 'তারা ধ্যানের কৌশল চর্চা করছে', 'public', '2024-07-30 00:38:20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `settings`
+--
+
+CREATE TABLE `settings` (
+  `id` int UNSIGNED NOT NULL,
+  `project_name` varchar(255) NOT NULL,
+  `project_logo` varchar(255) NOT NULL,
+  `background_color` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `settings`
+--
+
+INSERT INTO `settings` (`id`, `project_name`, `project_logo`, `background_color`) VALUES
+(1, 'Dictionary', '', '');
 
 -- --------------------------------------------------------
 
@@ -1321,7 +1493,8 @@ INSERT INTO `words` (`id`, `category`, `groups`, `name`, `slug`, `meaning`, `nou
 (1177, 'C', 'C', 'Crass', 'crass', 'নির্বোধ', 'crass', NULL, NULL, NULL, NULL, '2024-07-28 20:29:09', '2024-07-28 20:29:09'),
 (1178, 'P', 'P', 'Prank', 'prank', 'কৌতুক', 'prank', NULL, NULL, NULL, NULL, '2024-07-28 21:27:47', '2024-07-28 21:27:47'),
 (1179, 'D', 'D', 'Devdas', 'devdas', 'দেবদাস - একটি চরিত্র', 'devdas', NULL, NULL, NULL, NULL, '2024-07-28 21:28:29', '2024-07-28 21:28:29'),
-(1180, 'I', 'I', 'India', 'india', 'ভারত', 'india', NULL, NULL, NULL, NULL, '2024-07-28 21:28:53', '2024-07-28 21:28:53');
+(1180, 'I', 'I', 'India', 'india', 'ভারত', 'india', NULL, NULL, NULL, NULL, '2024-07-28 21:28:53', '2024-07-28 21:28:53'),
+(1181, 'S', 'S', 'Simple', 'simple', 'সাধারণ', 'simple', NULL, NULL, NULL, NULL, '2024-07-30 00:39:30', '2024-07-30 00:39:30');
 
 --
 -- Indexes for dumped tables
@@ -1331,6 +1504,18 @@ INSERT INTO `words` (`id`, `category`, `groups`, `name`, `slug`, `meaning`, `nou
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sentences`
+--
+ALTER TABLE `sentences`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `settings`
+--
+ALTER TABLE `settings`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1362,6 +1547,18 @@ ALTER TABLE `posts`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `sentences`
+--
+ALTER TABLE `sentences`
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+
+--
+-- AUTO_INCREMENT for table `settings`
+--
+ALTER TABLE `settings`
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
@@ -1377,7 +1574,7 @@ ALTER TABLE `verify`
 -- AUTO_INCREMENT for table `words`
 --
 ALTER TABLE `words`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1181;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1182;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

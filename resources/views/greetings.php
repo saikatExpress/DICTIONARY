@@ -1,4 +1,5 @@
 <?php include_once '../../auth/inc/guard.php'; ?>
+<?php include_once '../../app/Helper/helper.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +9,7 @@
     <link rel="shortcut icon" href="../../public/icons/dictionary1.png" type="image/x-icon">
     <title>BnDictionary | Your Word Companion</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link rel="stylesheet" href="../../public/assets/css/style.css">
 </head>
 <body>
@@ -17,7 +19,7 @@
             <div class="col-md-12">
                 <div class="ticker">
                     <div class="ticker-wrap">
-                        <div class="ticker-item">🔠 Word of the Day: Serendipity</div>
+                        <div class="ticker-item">🔠 Word of the Day: <?= wordOftheDay() ?></div>
                         <div class="ticker-item">📚 Most Hard Word: Antidisestablishmentarianism</div>
                         <div class="ticker-item">🔄 Update: New feature added for pronunciation guides!</div>
                         <div class="ticker-item">🔄 Update: New feature added for pronunciation guides!</div>
@@ -71,15 +73,8 @@
 
         <div class="additional-sections mt-5">
             <div>
-                <h4>Example Sentences</h4>
-                <div class="post">
-                    <h5>Example Sentence 1</h5>
-                    <p>This is an example sentence showing the use of a word.</p>
-                </div>
-                <div class="post">
-                    <h5>Example Sentence 2</h5>
-                    <p>This is another example sentence demonstrating word usage.</p>
-                </div>
+                <h4>Todays Sentences</h4>
+                <?= todaysSentences() ?>
             </div>
             <div>
                 <h4>Help Posts</h4>
