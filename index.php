@@ -1,14 +1,13 @@
 <?php 
     include_once 'vendor/version.php'; 
-    VersionCheck();
-?>
-<?php
+    include_once 'app/controllers/VerifyController.php';
+    include_once 'app/db.php';
+    getProjectInfo();
+    VersionCheck(); 
+
     ob_start();
 
     session_start();
-
-    include_once 'app/controllers/VerifyController.php';
-    include_once 'app/db.php';
 
     $verifyObj = new VerifyController();
 
