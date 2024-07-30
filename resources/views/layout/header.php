@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
+    <script src="../../public/assets/js/style.js"></script>
     <!-- CKEditor CDN -->
     <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
 
@@ -25,8 +26,10 @@
                 </a>
             </h1>
             <div class="search-bar">
-                <input type="text" placeholder="Search...">
-                <button type="button"><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="Search..." id="serachitem">
+                <button type="button">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
             <div class="profile">
                 <div class="profile-icon" onclick="toggleDropdown()"></div>
@@ -61,6 +64,12 @@
                 <a href="../views/dictionary.php">
                     <i class="fas fa-user"></i> 
                     Dictionary
+                </a>
+            </li>
+            <li>
+                <a href="../views/userlist.php">
+                    <i class="fas fa-user"></i> 
+                    User List
                 </a>
             </li>
             <li><a href="../views/message.php">

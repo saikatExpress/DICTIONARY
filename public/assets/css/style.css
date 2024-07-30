@@ -97,11 +97,6 @@ h3 {
     100% { transform: rotate(360deg); }
 }
 
-.category-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
 .meaning-item {
     margin-bottom: 0.5rem;
 }

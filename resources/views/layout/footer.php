@@ -13,6 +13,11 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <script>
+        $(document).ready(function(){
+            $('#serachitem').on('input', function(){
+                alert($(this).val());
+            });
+        });
         function toggleDropdown() {
             const dropdownMenu = document.getElementById('dropdownMenu');
             dropdownMenu.style.display = (dropdownMenu.style.display === 'block' || dropdownMenu.style.display === '') ? 'none' : 'block';
