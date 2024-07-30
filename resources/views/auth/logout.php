@@ -1,5 +1,5 @@
 <?php
-include '../../auth/session.php';
+include '../../../auth/session.php';
 Session::checkSession();
 ?>
 
@@ -7,7 +7,7 @@ Session::checkSession();
 
 if (isset($_GET['action']) && $_GET['action'] == "logout") {
     Session::destroy();
-    header("Location: ../../index.php");
+    header("Location: ../../../index.php");
 }
 
 ?>

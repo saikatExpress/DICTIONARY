@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         Session::set("id", $user->id);
         Session::set("name", $user->username);
         Session::set("email", $user->email);
-        header("Location: ../views/welcome.php");
+        header("Location: ../resources/views/welcome.php");
     }
 }
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BnDictionary Dashboard</title>
-    <link rel="shortcut icon" href="../public/icons/dictionary.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../public/icons/dictionary.png" type="image/x-icon">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +13,7 @@
     <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
 
 
-    <link rel="stylesheet" href="../public/assets/css/main.css">
+    <link rel="stylesheet" href="../../public/assets/css/main.css">
 
 </head>
 <body>

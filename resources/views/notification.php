@@ -1,5 +1,5 @@
 <?php 
-    include_once '../auth/session.php'; 
+    include_once '../../auth/session.php'; 
     Session::checkSession();
 ?>
 <?php include_once '../views/layout/header.php'; ?>

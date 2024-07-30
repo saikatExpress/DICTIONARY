@@ -23,7 +23,7 @@ function todaysSentences()
 {
     $dbObj = new DB();
 
-    $sql = "SELECT * FROM sentences ORDER BY RAND() LIMIT 5";
+    $sql = "SELECT * FROM sentences ORDER BY RAND() LIMIT 6";
 
     $data = $dbObj->select($sql);
     foreach($data as $value){ ?>

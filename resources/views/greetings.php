@@ -14,6 +14,10 @@
 </head>
 <body>
 
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
@@ -51,7 +55,7 @@
                             echo $_SESSION['success'];
                         } ?>
                     </p>
-                    <form action="auth/login.php" method="POST">
+                    <form action="../../auth/login.php" method="POST">
                         <div class="form-group">
                             <input type="email" name="email" class="form-control" placeholder="Email">
                             <?php if (isset($errors['email'])): ?>
@@ -72,8 +76,8 @@
         </div>
 
         <div class="additional-sections mt-5">
+            <h4>Todays Sentences</h4>
             <div>
-                <h4>Todays Sentences</h4>
                 <?= todaysSentences() ?>
             </div>
             <div>
@@ -113,8 +117,16 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="../../public/assets/js/style.js"></script>
+    <script src="../../../public/assets/js/style.js"></script>
     <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 2000);
+        });
+
         document.getElementById('toggleForm').addEventListener('click', function() {
             var formContainer = document.getElementById('loginForm');
             if (formContainer.style.display === 'block') {
@@ -208,3 +220,4 @@
     </script>
 </body>
 </html>
+
